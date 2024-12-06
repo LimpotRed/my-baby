@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            background-color: #ffe6e6; /* Rosa clarinho */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px; /* Ajuste do tamanho da tela */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px; /* Ajuste do tamanho da fonte */
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 14px; /* Ajuste do tamanho do botão */
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yesButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #noButton {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Você é a mulher mais linda do mundo e ainda vai ser minha namorada, tá bom?</h1>
+        <button id="yesButton">Sim</button>
+        <button id="noButton">Não</button>
+    </div>
+
+    <script>
+        document.getElementById('yesButton').onclick = function() {
+            alert('Você aceitou namorar comigo <3');
+            window.location.href = 'https://www.youtube.com/watch?v=izGwDsrQ1eQ';
+        };
+
+        document.getElementById('noButton').onmouseover = function() {
+            var button = document.getElementById('noButton');
+            var randomX = Math.floor(Math.random() * (window.innerWidth - button.clientWidth));
+            var randomY = Math.floor(Math.random() * (window.innerHeight - button.clientHeight));
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        };
+    </script>
+</body>
+</html>
